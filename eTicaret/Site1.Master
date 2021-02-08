@@ -1,0 +1,103 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="eTicaret.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="bootstrap-3.3.7-dist/js/jquery-3.5.1.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server" class="form-horizontal">
+        <div class="container">
+            <nav class="navbar navbar-inverse" style="margin:0px;">
+         <div class="container-fluid">
+            <div class="navbar-header">
+               <a class="navbar-brand" href="default.aspx">
+                   <img src="images/social-post-avatar.jpg" style="width:50px;"/></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="default.aspx">Anasayfa</a></li>
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Ürünler
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Erkek</a></li>
+          <li><a href="#">Kadın</a></li>
+          <li><a href="#">Çocuk</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Hakkımızda</a></li>
+      <li><a href="#">İletişim</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="" id="kull" runat="server"></a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Sepet</a></li>
+      <li><a href="uyeol.aspx"><span class="glyphicon glyphicon-user"></span> Üye Ol</a></li>
+      <li><a href="giris.aspx" id="girisd" runat="server"><span class="glyphicon glyphicon-log-in"></span> Giriş</a></li>
+        <li><a href="cikis.aspx" id="cikisd" runat="server"><span class="glyphicon glyphicon-log-out"></span> Çıkış</a></li>
+    </ul>
+  </div>
+</nav>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+  </ol>
+
+  <div class="carousel-inner" style="height:200px;">
+    <div class="item active" style="margin-left: auto;
+  margin-right: auto;">
+        <div style="text-align:center">
+            <img src="images/eticaret-paketleri.jpg" /></div>
+    </div>
+
+    <div class="item">
+       <div style="text-align:center">
+           <img src="images/e-ticarette-slider.jpg" />
+           </div>
+    </div>
+
+  </div>
+
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <div class="row" style="margin:10px 0px;background-color:beige;">
+                <div class="col-md-4 text-center">
+                    <img src="images/social-post-avatar.jpg" style="width:300px;margin-top:50px; height:150px;"/>
+                </div>
+                <div class="col-md-4">
+                    <br /><br />
+                    <b><span class="glyphicon glyphicon-envelope"></span>E-Posta :</b>
+                     bilgi@yokyok.com
+                    <br /><br />
+                     <b><span class="glyphicon glyphicon-phone"></span> Telefon :</b>
+                     03126208520
+                    <br /><br />
+                     <b><span class="glyphicon glyphicon-map-marker"></span>Merkez Adres :</b>
+                     Cevizlidere, Balgat Mahallesi, 1250. Sk. 9/a, 06520 Çankaya/Ankara
+                    <br /><br />
+                </div>
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>
